@@ -12,8 +12,7 @@ function onInput(field, event) {
 	
 	console.log(newValue);
 	
-	if (/[1-9][0-9]{0-3},[0-9]{2}/test(newValue)) {
-		console.log("jhgug");
+	if (/^(:?1(?=0{4}(?:,00|$)))?\d{1,4}(:?,\d{0,2}?)?(?=$)/test(newValue)) {
 		return true;
 	}
 	event.preventDefault();
